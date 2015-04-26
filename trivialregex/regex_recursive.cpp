@@ -2,6 +2,12 @@
 #include <cassert>
 using namespace std;
 
+/**
+	Author: Maneesh
+	Notes:
+	This is a recursive solution for matching testString with a regular expresstion string
+	containing * and . operators along with other characters.
+*/
 
 
 bool match(const char* test, const char* regex){
@@ -36,11 +42,19 @@ bool match(const char* test, const char* regex){
 		}
 }
 
-int main(){
-	
-	assert(matchIterative("abbbddc","ab*bdd.c"));
+int main(){	
+	cout<<"******** Testing Recursive Match function ********\n\n";
+
+	assert(match("abbbddc","ab*bdd.c"));
+	cout<<"Test1 Matched \"abbbddc\" with \"ab*bdd.c\"\n";
+
 	assert(match("abbbddddddddbdbdbdjhfjf", "ab*d*bdbdbd.hfj."));
-	cout<<"Tests Passed";
+	cout<<"Test2 Matched \"abbbddddddddbdbdbdjhfjf\" with \"ab*d*bdbdbd.hfj.\"\n";
+
+	assert(!match("abbbddc","ab*dc"));
+	cout<<"Test3 No Match \"abbbddc\" with \"ab*dc\"\n";
+
+	cout<<"\n*************Tests Passed****************\n";
 
 	return 0;
 }
