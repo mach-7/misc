@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ImageViewerController">
+   <children>
+      <StackPane layoutX="-110.0" layoutY="-154.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <ImageView fx:id="mainImageView" fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/res/Penguins.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="navigatePrevious" alignment="CENTER" contentDisplay="CENTER" opacity="0.6" prefHeight="300.0" prefWidth="30.0" style="-fx-background-color: transparent;" text="&lt;" StackPane.alignment="CENTER_LEFT">
+               <font>
+                  <Font size="36.0" />
+               </font>
+               <StackPane.margin>
+                  <Insets left="10.0" />
+               </StackPane.margin>
+            </Label>
+            <Label fx:id="navigateNext" alignment="CENTER" contentDisplay="CENTER" opacity="0.6" prefHeight="300.0" prefWidth="30.0" style="-fx-background-color: transparent;" text="&gt;" StackPane.alignment="CENTER_RIGHT">
+               <font>
+                  <Font size="36.0" />
+               </font>
+               <StackPane.margin>
+                  <Insets right="10.0" />
+               </StackPane.margin>
+            </Label>
+            <Button id="closeButton" fx:id="closeButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" opacity="0.6" style="-fx-background-color: transparent;" text="x" textAlignment="CENTER" textFill="#00000080" StackPane.alignment="TOP_RIGHT">
+               <font>
+                  <Font name="Lucida Sans Unicode" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
