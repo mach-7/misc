@@ -53,13 +53,7 @@ public class ImageViewerController implements Initializable {
 		
 		closeButton.setOnMouseEntered( e -> closeButton.setEffect(new Glow(0.7)) );
 		closeButton.setOnMouseExited( e -> closeButton.setEffect(null) );
-		 
-		navigatePrevious.setOnMouseEntered(e-> navigatePrevious.setFont(Font.font(null, FontWeight.BOLD, 36)));
-		navigatePrevious.setOnMouseExited(e-> navigatePrevious.setFont(Font.font(null, FontWeight.NORMAL, 36)));
-
-		navigateNext.setOnMouseEntered(e-> navigateNext.setFont(Font.font(null, FontWeight.BOLD, 36)));
-		navigateNext.setOnMouseExited(e-> navigateNext.setFont(Font.font(null, FontWeight.NORMAL, 36)));
-		
+					
 		navigatePrevious.setOnMouseClicked(e -> iterateNext());	
 		navigateNext.setOnMouseClicked(e-> iteratePrevious());
 			

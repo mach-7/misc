@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.effect.*?>
@@ -16,8 +17,11 @@
          <children>
             <ImageView fx:id="mainImageView" fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="/res/Penguins.jpg" />
+                  <Image url="@../../../../../../Public/Pictures/Sample%20Pictures/Penguins.jpg" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
             </ImageView>
             <Label fx:id="navigatePrevious" alignment="CENTER" contentDisplay="CENTER" opacity="0.6" prefHeight="300.0" prefWidth="30.0" style="-fx-background-color: transparent;" text="&lt;" StackPane.alignment="CENTER_LEFT">
                <font>
@@ -26,6 +30,12 @@
                <StackPane.margin>
                   <Insets left="10.0" />
                </StackPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Blend />
+               </effect>
             </Label>
             <Label fx:id="navigateNext" alignment="CENTER" contentDisplay="CENTER" opacity="0.6" prefHeight="300.0" prefWidth="30.0" style="-fx-background-color: transparent;" text="&gt;" StackPane.alignment="CENTER_RIGHT">
                <font>
@@ -34,11 +44,17 @@
                <StackPane.margin>
                   <Insets right="10.0" />
                </StackPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Label>
             <Button id="closeButton" fx:id="closeButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" opacity="0.6" style="-fx-background-color: transparent;" text="x" textAlignment="CENTER" textFill="#00000080" StackPane.alignment="TOP_RIGHT">
                <font>
                   <Font name="Lucida Sans Unicode" size="16.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
          </children>
       </StackPane>

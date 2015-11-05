@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.manchau.imageComparer.LayoutComparerController">
+   <children>
+      <SplitPane dividerPositions="0.9" orientation="VERTICAL">
+        <items>
+          <AnchorPane>
+               <children>
+                  <SplitPane dividerPositions="0.5" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane>
+                           <children>
+                              <StackPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <ImageView fx:id="defaultView" fitHeight="800.0" fitWidth="1028.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../../../../../scratch/CADImportResearchData/ModelView/ModelView6.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="DEFAULT VIEW" textFill="WHITE" StackPane.alignment="TOP_CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane>
+                           <children>
+                              <StackPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <ImageView fx:id="modelView" fitHeight="800.0" fitWidth="1028.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../../../../../scratch/CADImportResearchData/DefaultView/DefaultView6.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="MODEL VIEW" textFill="WHITE" StackPane.alignment="TOP_CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane>
+               <children>
+                  <FlowPane alignment="CENTER" columnHalignment="CENTER" hgap="50.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <Label fx:id="defaultCount" text="0">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="defaultViewIndicator" mnemonicParsing="false" text="DefaultView" />
+                        <Label fx:id="modelCount" layoutX="327.0" layoutY="26.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="modelViewIndicator" layoutX="572.0" layoutY="10.0" mnemonicParsing="false" text="ModelView" />
+                        <Label fx:id="duplicateCount" layoutX="412.0" layoutY="15.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="duplicacyIndicator" layoutX="513.0" layoutY="10.0" mnemonicParsing="false" text="Duplicate" />
+                        <Label fx:id="imageCount" alignment="CENTER" text="Label">
+                           <FlowPane.margin>
+                              <Insets />
+                           </FlowPane.margin>
+                           <padding>
+                              <Insets left="100.0" />
+                           </padding>
+                        </Label>
+                        </children>
+                  </FlowPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
