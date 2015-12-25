@@ -1,0 +1,25 @@
+
+Class NetworkGraph is used to form an undirected graph out of the skitter_AS_connectivity.txt file.
+	- based on a HashMap that maps an integer node number to its adjacent node numbers
+	- addEdge(a,b) adds an undirected edge between nodes a and b
+	- getAdj() returns an iterable list of nodes stored in the NetworkGraph G
+
+Class BFS  operates on the NetworkGraph G. It is used to generate single source shortest paths.
+	We will use it to generated distance vectors for n nodes to be used in n Clusters algorithm
+
+Class ClusterManager implements our heuristic based clustering algorithm. It will choose n nodes randomly 
+	and then will calculate shortest path lengths from them to all other nodes in G. Then we shall
+	proceed to cluster the nodes as per each node's path length from the n chosen nodes.
+	Effectively at the end of the algorithm we should be able to generate n different sets of nodes
+	somewhat clustered by relative pathlength from chosen central nodes.
+        
+        11/11/2014 - Maneesh
+        EDIT: We have analysed the network graph based on degrees of its vertices and have found that the
+        nodes 668, 1239 and 3536 have the maximum degrees in the graph. It would be better to cluster other
+        nodes around them, hence in the clusterize() method , we have manually designated these three nodes
+        to facilitate clustering, rather than having to choose k random vertices.
+
+"This clustering algorithm is partly based on K-Means clustering algorithm, but as we do not have information
+regarding cartesian coordinates of each node, we cannot apply the usual centroiding method for clustering. Therefore 
+we are just using the concept of relative path lengths or logical nearest neighbour determination method to cluster
+nodes into separate groups" 
